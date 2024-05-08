@@ -9,7 +9,7 @@ public class Ingredient {
     private final Type type;
 
     public enum Type {
-            PLAIN, MASALA, MYSORE_MASALA, SET, CHEESE, UTAPPAM, EGG
+            PLAIN, MASALA, MYSORE_MASALA, SIDES, CHEESE, SHAPE, EGG
     }
 }
 

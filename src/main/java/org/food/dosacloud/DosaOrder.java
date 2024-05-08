@@ -1,13 +1,15 @@
 package org.food.dosacloud;
 
 import lombok.Data;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.support.SessionStatus;
 
 import java.util.ArrayList;
 import java.util.List;
 
 @Data
 public class DosaOrder {
-    private String orderId;
+
     private String deliveryName;
     private String deliveryStreetAddress;
     private String deliveryCity;
@@ -17,9 +19,10 @@ public class DosaOrder {
     private String ccExpiryDate;
     private String ccCVV;
 
-    private List<Dosa> dosas = new ArrayList<Dosa>();
+    private List<Dosa> dosas = new ArrayList<>();
 
     public void addDosa(Dosa dosa) {
         this.dosas.add(dosa);
     }
+
 }

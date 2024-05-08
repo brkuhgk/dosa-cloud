@@ -13,25 +13,26 @@ import java.util.stream.Collectors;
 @Slf4j
 @Controller
 @RequestMapping("/design")
-@SessionAttributes("DosaOrder")
+@SessionAttributes("dosaOrder")
 public class DesignDosaController {
 
     @ModelAttribute
     public void addIngredientToModel(Model model) {
         List<Ingredient> ingredients = Arrays.asList(
                 new Ingredient("PD","Plain Dosa", Ingredient.Type.PLAIN),
-                new Ingredient("KPD","KARAM Plain Dosa", Ingredient.Type.PLAIN),
-                new Ingredient("CPD","Chitti Plain Dosa", Ingredient.Type.PLAIN),
+                new Ingredient("KPD","Uttapam Dosa", Ingredient.Type.PLAIN),
+                new Ingredient("CPD","Ravva Plain Dosa", Ingredient.Type.PLAIN),
                 new Ingredient("EGGPD","EGG Plain Dosa", Ingredient.Type.EGG),
-                new Ingredient("KEGGPD","Karam EGG Plain Dosa", Ingredient.Type.EGG),
-                new Ingredient("MD","Masala Dosa", Ingredient.Type.MASALA),
-                new Ingredient("MDS","Spicy Masala Dosa", Ingredient.Type.MASALA),
-                new Ingredient("SD","Set Dosa", Ingredient.Type.SET),
-                new Ingredient("RSD","Ravva Dosa", Ingredient.Type.SET),
-                new Ingredient("CHPD", "Chesse Dosa", Ingredient.Type.CHEESE),
-                new Ingredient("CHUPD", "Chesse Utappam Dosa", Ingredient.Type.CHEESE),
-                new Ingredient("UTD","Utappam Dosa", Ingredient.Type.UTAPPAM),
-                new Ingredient("TUTP","Tomato Utappam Dosa", Ingredient.Type.UTAPPAM)
+                new Ingredient("KEGGPD","Karam EGG Dosa", Ingredient.Type.EGG),
+                new Ingredient("MD","Alu Masala", Ingredient.Type.MASALA),
+                new Ingredient("MDS","Channa Masala Dosa", Ingredient.Type.MASALA),
+                new Ingredient("SD","Palli Chetni", Ingredient.Type.SIDES),
+                new Ingredient("RSD","Sambar", Ingredient.Type.SIDES),
+                new Ingredient("SDES","Karam Chetni", Ingredient.Type.SIDES),
+                new Ingredient("CHPD", "Chesse", Ingredient.Type.CHEESE),
+                new Ingredient("CHUPD", "Butter", Ingredient.Type.CHEESE),
+                new Ingredient("UTD","Cone", Ingredient.Type.SHAPE),
+                new Ingredient("TUTP","Rolls", Ingredient.Type.SHAPE)
                 );
 
         Ingredient.Type[] types = Ingredient.Type.values();
@@ -41,7 +42,7 @@ public class DesignDosaController {
         }
     }
 
-    @ModelAttribute(name = "DosaOrder")
+    @ModelAttribute(name = "dosaOrder")
     public DosaOrder order(){
         return new DosaOrder();
     }

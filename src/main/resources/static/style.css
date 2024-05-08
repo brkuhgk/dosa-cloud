@@ -27,3 +27,9 @@ div.ingredient-group {
 span.validationError {
     color: red;
 }
+.button{
+    background-color: lightgreen;
+    height: 20px;
+    padding: 2px;
+
+}
