@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://thymeleaf.org" lang="en">
+<head>
+    <title>Dosa Cloud</title>
+    <link rel="stylesheet" th:href="@{/styles.css}" />
+</head>
+
+<body>
+<h1>Design your Dosa!</h1>
+<img th:src="@{/images/dosa.png}" alt="Logo"/>
+<form method="POST" th:object="${dosa}">
+    <div class="grid">
+        <div class="ingredient-group" id="plain">
+            <h3>Designate your Plain Dosa:</h3>
+            <div th:each="ingredient : ${plain}">
+                <label>
+                    <input th:field="*{ingredients}" type="checkbox" th:value="${ingredient.id}"/>
+                </label>
+                <span th:text="${ingredient.name}">INGREDIENT</span><br/> </div>
+        </div>
+        <div class="ingredient-group" id="masalas">
+            <h3>Pick your masala:</h3>
+            <div th:each="ingredient : ${masala}">
+                <input th:field="*{ingredients}" type="checkbox" th:value="${ingredient.id}"/>
+                <span th:text="${ingredient.name}">INGREDIENT</span><br/> </div>
+        </div>
+        <div class="ingredient-group" id="eggs">
+            <h3>Choose your Egg:</h3>
+            <div th:each="ingredient : ${egg}">
+                <input th:field="*{ingredients}" type="checkbox" th:value="${ingredient.id}"/>
+                <span th:text="${ingredient.name}">INGREDIENT</span><br/> </div>
+        </div>
+        <div class="ingredient-group" id="sets">
+            <h3>Determine your set:</h3>
+            <div th:each="ingredient : ${set}">
+                <input th:field="*{ingredients}" type="checkbox" th:value="${ingredient.id}"/>
+                <span th:text="${ingredient.name}">INGREDIENT</span><br/> </div>
+        </div>
+        <div class="ingredient-group" id="cheeses">
+            <h3>Select your CHEESE:</h3>
+            <div th:each="ingredient : ${cheese}">
+                <input th:field="*{ingredients}" type="checkbox" th:value="${ingredient.id}"/>
+                <span th:text="${ingredient.name}">INGREDIENT</span><br/> </div>
+        </div>
+        <div class="ingredient-group" id="uttapams">
+            <h3>Select your CHEESE:</h3>
+            <div th:each="ingredient : ${uttapam}">
+                <input th:field="*{ingredients}" type="checkbox" th:value="${ingredient.id}"/>
+                <span th:text="${ingredient.name}">INGREDIENT</span><br/> </div>
+        </div>
+    </div>
+    <div>
+
+        Processing form submission
+        <h3>Name your dosa creation:</h3>
+        <label>
+            <input type="text" th:field="*{name}"/>
+        </label>
+        <br/>
+        <button>Submit Your dosa </button>
+    </div>
+</form>
+</body>
+</html>
+
