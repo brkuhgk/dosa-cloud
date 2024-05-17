@@ -5,10 +5,15 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.support.SessionStatus;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 @Data
 public class DosaOrder {
+
+    private static final long serialversionUID = 1L;
+    private long id;
+    private Date placedAt;
 
     private String deliveryName;
     private String deliveryStreetAddress;

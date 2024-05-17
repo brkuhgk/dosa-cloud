@@ -58,7 +58,7 @@ public class DesignDosaController {
     }
 
     @PostMapping
-    public String handlePostReqDosaForm(Dosa dosa, @ModelAttribute DosaOrder dosaOrder ){
+    public String processDosa(Dosa dosa, @ModelAttribute DosaOrder dosaOrder ){
         dosaOrder.addDosa(dosa);
         log.info("Processing Dosa: {}",dosa);
         return "redirect:/orders/current";
