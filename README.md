@@ -7,11 +7,11 @@
 - To thoroughly explore and implement concepts of Spring Boot, Spring MVC, Spring Data (JDBC, JPA/Hibernate), Spring Security, Docker, and Kafka.
 
 #### Key Features:
-- [] User-friendly interface for customizing Dosa recipes.
+- [ ] User-friendly interface for customizing Dosa recipes.
 
 - [x] Secure authentication and authorization using Spring Security.
 
-- x[] Efficient data management with Spring Data JPA and Hibernate.
+- [ ] Efficient data management with Spring Data JPA and Hibernate.
 
 - [x] Robust backend built with Spring Boot and Spring MVC.
 
@@ -21,11 +21,11 @@
 
 - [x]Integration with payment gateways for seamless transactions.
 
-- [] User account management and profile settings.
+- [ ] User account management and profile settings.
 
 - [x] Order history and reordering options.
 
-- [] Administrative dashboard for managing user accounts and orders.
+- [ ] Administrative dashboard for managing user accounts and orders.
 
 - [x] RESTful API for integration with mobile applications.
   
