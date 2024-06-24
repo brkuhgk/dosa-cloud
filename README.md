@@ -19,7 +19,7 @@
 
 - [x] Customizable Dosa options with a variety of ingredients and toppings.
 
-- [x]Integration with payment gateways for seamless transactions.
+- [x] Integration with payment gateways for seamless transactions.
 
 - [ ] User account management and profile settings.
 
